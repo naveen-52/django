@@ -1,0 +1,23 @@
+<h2>StudentManagementSystem</h2>
+
+<a href="/add/">Add Student</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Department</th>
+        <th>Actions</th>
+    </tr>
+    {% for i in students %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.department}}</td>
+        <td>
+            <a href="/edit/{{i.id}}/">Edit</a>
+            <a href="/delete/{{i.id}}/">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
